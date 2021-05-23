@@ -1,6 +1,5 @@
 package com.bridgelabz.selenium.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +16,7 @@ public class SearchItem {
         PageFactory.initElements(driver, this);
     }
 
-    public void searchItem() throws InterruptedException {
+    public void searchItem() {
         item.sendKeys("boat earphones");
         searchButton.submit();
         return;

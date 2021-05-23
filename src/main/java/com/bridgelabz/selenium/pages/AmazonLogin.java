@@ -1,3 +1,9 @@
+/**
+ * Description : AmazonLogin.java is file which is having code for login operations for Amazon.
+ * Author      : Samiksha Shende
+ * Date        : 21/05/2021
+ */
+
 package com.bridgelabz.selenium.pages;
 
 import com.bridgelabz.selenium.base.Base;
@@ -28,11 +34,11 @@ public class AmazonLogin extends Base {
 
     public void loggedInToApp() throws InterruptedException {
         signIn.click();
-        mobile.sendKeys("8668994803");
+        mobile.sendKeys("8669874563");
         continueButton.click();
-        pass.sendKeys("Welcome@01");
+        pass.sendKeys("WelSam@27");
         signInButton.click();
-        Thread.sleep(30000);
+        Thread.sleep(50000);
         return;
     }
 }

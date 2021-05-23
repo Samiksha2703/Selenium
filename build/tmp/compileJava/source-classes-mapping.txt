@@ -1,10 +1,12 @@
-com/bridgelabz/selenium/base/Base.java
- com.bridgelabz.selenium.base.Base
+com/bridgelabz/selenium/pages/SignUp.java
+ com.bridgelabz.selenium.pages.SignUp
+com/bridgelabz/selenium/utility/Screenshot.java
+ com.bridgelabz.selenium.utility.Screenshot
 com/bridgelabz/selenium/pages/SideBar.java
  com.bridgelabz.selenium.pages.SideBar
 com/bridgelabz/selenium/pages/SearchItem.java
  com.bridgelabz.selenium.pages.SearchItem
+com/bridgelabz/selenium/base/Base.java
+ com.bridgelabz.selenium.base.Base
 com/bridgelabz/selenium/pages/AmazonLogin.java
  com.bridgelabz.selenium.pages.AmazonLogin
-com/bridgelabz/selenium/pages/SignUp.java
- com.bridgelabz.selenium.pages.SignUp

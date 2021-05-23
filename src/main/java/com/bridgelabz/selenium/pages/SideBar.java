@@ -1,3 +1,9 @@
+/**
+ * Description : SideBar.java is file which is having code for side bar operations for Amazon.
+ * Author      : Samiksha Shende
+ * Date        : 21/05/2021
+ */
+
 package com.bridgelabz.selenium.pages;
 
 import com.bridgelabz.selenium.base.Base;
