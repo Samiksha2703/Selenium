@@ -8,14 +8,18 @@
 package com.bridgelabz.selenium.test;
 
 import com.bridgelabz.selenium.base.Base;
+import com.bridgelabz.selenium.driver.TestNgListener;
 import com.bridgelabz.selenium.pages.AmazonLogin;
 import com.bridgelabz.selenium.pages.SideBar;
 import com.bridgelabz.selenium.pages.SearchItem;
 import com.bridgelabz.selenium.pages.SignUp;
 import com.bridgelabz.selenium.utility.Screenshot;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+
+@Listeners(TestNgListener.class)
 
 public class AmazonTest extends Base {
     public AmazonLogin login;
@@ -25,7 +29,7 @@ public class AmazonTest extends Base {
 
     Screenshot sc = new Screenshot();
 
-    @Test
+    @Test(priority = 1)
     public void amazon_Login() throws InterruptedException, IOException {
         login = new AmazonLogin(driver);
         login.loggedInToApp();
@@ -33,7 +37,7 @@ public class AmazonTest extends Base {
         sc.screenshot("HomePage");
     }
 
-    @Test
+    @Test(priority = 2)
     public void amazon_Search() throws IOException {
         search = new SearchItem(driver);
         search.searchItem();
@@ -41,7 +45,7 @@ public class AmazonTest extends Base {
         sc.screenshot("Searched Product");
     }
 
-    @Test
+    @Test(priority = 3)
     public void select_From_Menu() throws IOException {
         myAccount = new SideBar(driver);
         myAccount.selectMenuButton();
@@ -49,7 +53,7 @@ public class AmazonTest extends Base {
         sc.screenshot("Menu");
     }
 
-    @Test
+    @Test(priority = 4)
     public void select_Your_Account() throws IOException {
         myAccount = new SideBar(driver);
         myAccount.chooseYourAccount();
@@ -57,7 +61,7 @@ public class AmazonTest extends Base {
         sc.screenshot("Account");
     }
 
-    @Test
+    @Test(priority = 5)
     public void amazon_SignUp(){
         signUp = new SignUp(driver);
         signUp.SignUpIntoApp();

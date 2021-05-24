@@ -28,12 +28,12 @@ public class Base {
         sc.screenshot("HomePage");
     }
 
-    @AfterTest
-    public void tearDown(){
-        driver.close();
-    }
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
+//    @AfterTest
+//    public void tearDown(){
+//        driver.close();
+//    }
+//
+//    public static WebDriver getDriver() {
+//        return driver;
+//    }
 }
