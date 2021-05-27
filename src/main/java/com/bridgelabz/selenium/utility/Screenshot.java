@@ -17,6 +17,7 @@ import java.io.IOException;
 
 public class Screenshot extends Base {
 
+    //Method to take a screenshot
     public void screenshot(String fileName) throws IOException {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File("C:\\Users\\kalam\\Screenshot/"+fileName+".jpg"));

@@ -15,25 +15,25 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class Base {
     public static WebDriver driver;
+
     @BeforeTest
-    public void setup() throws IOException {
+    public static void setup() throws IOException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        // launch application
         driver.get("https://www.amazon.in/");
         Screenshot sc = new Screenshot();
         sc.screenshot("HomePage");
     }
 
-//    @AfterTest
-//    public void tearDown(){
-//        driver.close();
-//    }
-//
-//    public static WebDriver getDriver() {
-//        return driver;
-//    }
+    @AfterTest
+    public void tearDown() {
+        driver.close();
+    }
 }
