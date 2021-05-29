@@ -27,27 +27,27 @@ public class AmazonTest extends Base {
     public SignUp signUp;
     public DashBoard addItem;
 
-    //Method to test the login feature functionality
-    @Test(priority = 1)
-    public void amazon_Login() throws InterruptedException {
-        login = new AmazonLogin(driver);
-        login.loggedInToApp("samiksha@gmail.com", "Samiksha@82");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.amazon.in/ap/signin");
-    }
+//    //Method to test the login feature functionality
+//    @Test(priority = 1)
+//    public void amazon_Login() throws InterruptedException {
+//        login = new AmazonLogin(driver);
+//        login.loggedInToApp("shende.samiksha@rediffmail.com", "Welcome@01");
+//        Assert.assertEquals(driver.getCurrentUrl(), "https://www.amazon.in/ap/signin");
+//    }
 
     //Method to test the search feature of the amazon web application
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void amazon_Search() {
         search = new DashBoard(driver);
         search.searchItem();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.amazon.in/s?k=boat+earphones&ref=nb_sb_noss");
     }
 
-    //Method to test the functionality of select item
-    @Test(priority = 3)
-    public void select_Item_From_Result(){
-        addItem.selectItem();
-    }
+//    //Method to test the functionality of select item
+//    @Test(priority = 3)
+//    public void select_Item_From_Result(){
+//        addItem.selectItem();
+//    }
 
 //    //Method to test the functionality of the menu button
 //    @Test(priority = 3)
@@ -64,9 +64,9 @@ public class AmazonTest extends Base {
 //        myAccount.chooseYourAccount();
 //        Assert.assertEquals(driver.getCurrentUrl(), "https://www.amazon.in/gp/css/homepage.html?ref_=nav_em_ya_0_1_1_30");
 //    }
-//
+
 //    //Method to test the functionality of the SignOut button
-//    @Test(priority = 5)
+//    @Test(priority = 3)
 //    public void select_Logout() {
 //        selectMenu = new SideBar(driver);
 //        selectMenu.signOut_From_Account();

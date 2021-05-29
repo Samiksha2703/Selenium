@@ -7,6 +7,8 @@
 
 package com.bridgelabz.selenium.base;
 
+import com.bridgelabz.selenium.utility.Constant;
+import com.bridgelabz.selenium.utility.Lib;
 import com.bridgelabz.selenium.utility.Screenshot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +19,7 @@ import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Base {
+public class Base implements Constant {
     public static WebDriver driver;
 
     @BeforeTest
@@ -27,7 +29,8 @@ public class Base {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         // launch application
-        driver.get("https://www.amazon.in/");
+        String url = Lib.getProperty(CONFIG_PATH,"url");
+        driver.get(url);
         Screenshot sc = new Screenshot();
         sc.screenshot("HomePage");
     }
